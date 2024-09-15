@@ -8,14 +8,15 @@ L.Icon.Default.imagePath = 'css/images/';
 var initCenter = L.latLng(52,-2.3494);
 var initZoom = 8;
 
-var attribution = 'Routes computed using <a href="http://project-osrm.org/">OSRM</a>'
-    + ' | '
-    + '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
-if (api.description) {
-  attribution = 'Demo solver hosted by '
-    + api.description
-    + ' | ' + attribution;
-}
+var attribution = ''
+// var attribution = 'Routes computed using <a href="http://project-osrm.org/">OSRM</a>'
+//     + ' | '
+//     + '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
+// if (api.description) {
+//   attribution = 'Demo solver hosted by '
+//     + api.description
+//     + ' | ' + attribution;
+// }
 
 var tileLayer = L.tileLayer(api.tileLayer, {attribution: attribution});
 
@@ -26,7 +27,7 @@ var maxBounds = undefined;
 // Optional minZoom value.
 var minZoom = undefined;
 
-var map = L.map('map', {layers: [tileLayer]})
+var map = L.map('map', { attributionControl: false, layers: [tileLayer]})
     .setView(initCenter, initZoom)
     .setMaxBounds(maxBounds)
     .setMinZoom(minZoom);
