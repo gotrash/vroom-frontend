@@ -5,8 +5,8 @@ var api = require('./api');
 
 L.Icon.Default.imagePath = 'css/images/';
 
-var initCenter = L.latLng(48.8579,2.3494);
-var initZoom = 13;
+var initCenter = L.latLng(52,-2.3494);
+var initZoom = 8;
 
 var attribution = 'Routes computed using <a href="http://project-osrm.org/">OSRM</a>'
     + ' | '
